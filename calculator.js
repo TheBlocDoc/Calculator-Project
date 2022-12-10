@@ -13,8 +13,11 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  console.log(req.body);
-  res.send(`Thanks for posting that!`);
+  let num1 = Number(req.body.n1);
+  let num2 = Number(req.body.n2);
+
+  let result = n1 + n2;
+  res.send("The result of that calculation is " + result);
 });
 
 app.listen(port, () => {
